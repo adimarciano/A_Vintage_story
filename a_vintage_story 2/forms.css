@@ -1,0 +1,9 @@
+#register_form{
+    display: grid;
+
+}
+
+#register_form.grid{
+    display: grid;
+
+}
