@@ -1,5 +1,5 @@
 .header{
-    background-color: aquamarine;
+
     height: 10%;
 
     
@@ -18,14 +18,14 @@
     
 }
 .section{
-    background-color: green;
+
    
 }
 .footer{
-    background-color: rgb(90, 80, 163);
+
 }
 .main_div{
-    background-color: blueviolet;
+
     height: 90%;
     overflow-y: scroll;
 }

@@ -1,0 +1,6 @@
+.col_container{
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 50% 50%;
+
+}
