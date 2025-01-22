@@ -4,7 +4,18 @@
 
     
 }
+.logo{
+    text-align: center;
+}
+#img_logo{
+    height: 30%;
+    width: 30%;
+    
+
+
+}
 .nav_items{
+    text-align: center;
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
@@ -22,6 +33,8 @@
    
 }
 .footer{
+    display: grid;
+    grid-template-columns: auto auto ;
 
 }
 .main_div{

@@ -1,6 +1,10 @@
-.col_container{
+.col_container{    
     display: grid;
     grid-template-rows: 3;
     grid-template-columns: 50% 50%;
+    margin-left: 20%;
 
+}
+.til{
+    text-align: center;
 }
