@@ -1,3 +1,12 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+
+
+
 .header{
 
     height: 10%;
@@ -14,11 +23,7 @@
 
 
 }
-.nav_items{
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-}
+
 .hero{
     background-image: url("./assets/imeges/imeg2.jpeg");
     background-color: #cccccc; /* Used if the image is unavailable */
@@ -28,10 +33,7 @@
     background-size: cover;
     
 }
-.section{
 
-   
-}
 .footer{
     display: grid;
     grid-template-columns: auto auto ;
