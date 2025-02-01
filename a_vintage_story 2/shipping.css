@@ -1,0 +1,14 @@
+div.shipping_img img{
+    height: 15%;
+    width: 15%;
+
+
+
+}
+
+div.shipping_img{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+
+}
