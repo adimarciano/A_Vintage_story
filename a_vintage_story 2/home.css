@@ -43,3 +43,37 @@
   height: 450px;
   background-position: center;
 }
+
+.register-button-container {
+  margin: 6px;
+  overflow: hidden;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.register-button-container .btn {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:#DBE4C9;
+  color: #3B3C4F;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-btn {
+  border: 0;
+  background-color: #c6e980;
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 6px;
+  width: 150px;
+  cursor: pointer;  
+}
