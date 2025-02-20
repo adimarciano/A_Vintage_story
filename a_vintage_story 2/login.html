@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="./login.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Vintage Story Log In</title>
@@ -41,24 +42,21 @@
   </nav>
   </header>
 <body>
-    <form action="">
-        <fieldset>
-            <legend>Enter Details To Log In</legend>
-            <label>
-                Email: <input type="email" name= "email" required>
-            </label><br/> 
-            <label>
-                Password: <input type="text" name= "password"required>
-            </label><br/> 
-    
-            <input type= "submit" value="send">
-        </fieldset>
-
-        <footer class="footer">
-            <p>&copy; 2025</p>
-            <p>A Vintage Story</p>
-        </footer>
-    
+  <form class="login-container">
+    <fieldset>
+      <legend>LOG IN</legend>
+        <legend>Enter Details To Log In</legend>
+        <label>
+            <input type="email" name="email" placeholder="Email" required>
+        </label>
+        <br/> 
+        <label>
+            <input type="password" name="password" placeholder="Password" required>
+        </label>
+        <br/> 
+        <input type="submit" value="LOGIN">
+    </fieldset>
+</form>
 </body>
 
 </html>

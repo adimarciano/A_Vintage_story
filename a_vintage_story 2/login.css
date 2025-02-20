@@ -1,0 +1,184 @@
+
+
+  .nav-btn {
+    /* border: 0;
+    background-color: #c6e980;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 6px;
+    width: 150px;
+    cursor: pointer;  */ 
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    color: #3B3C4F;
+    position: relative;
+    transition: color 0.3s;
+  }
+  nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .nav_items {
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    gap: 50px;
+  }
+  .nav-btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #3B3C4F;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  .nav-btn:hover {
+    color: #7A7D81;
+  }
+  
+  .nav-btn:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #3B3C4F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50vh;
+    justify-content: center;
+    padding: 0px 0;
+    
+  }
+  .header {
+    height: 10%;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 80px; 
+  }
+ 
+  
+
+  .login-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.85);
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  
+  .login-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: #3B3C4F;
+  }
+  
+  .login-subtitle {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: #3B3C4F;
+  }
+  
+  label {
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input[type="email"], input[type="password"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 16px;
+    border: 1px solid #3B3C4F;
+    font-size: 18px;
+    transition: border 0.3s, box-shadow 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+    color: #3B3C4F;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="email"]::placeholder, input[type="password"]::placeholder {
+    color: #7A7D81;
+    font-size: 16px;
+    opacity: 1;
+  }
+  
+  input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #7A7D81;
+    box-shadow: 0px 0px 12px rgba(59, 60, 79, 0.3);
+  }
+  
+  /* LOGIN BUTTON - MINIMALIST HOVER EFFECT */
+  input[type="submit"] {
+    padding: 10px;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
+    max-width: px;
+    background: #3B3C4F;
+    color: #FFF;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type="submit"]:hover {
+    background: #7A7D81;
+    transform: scale(1.03);
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    .login-container {
+      width: 90%;
+      padding: 60px;
+      max-width: 600px;
+    }
+  
+    input[type="email"], input[type="password"], input[type="submit"] {
+      max-width: 100%;
+    }
+  }
+  
