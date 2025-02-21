@@ -7,23 +7,23 @@
 }
 
 .header {
-  height: 10%;
+  height: 5px;
   width: 100%;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 0;
   background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: flex-start;
-  padding: 20px 80px; /* היה 20px 60px */
+  padding: 0px 15px; /* היה 20px 60px */
+  position: sticky; /* הפיכת ההדר לסטיקי */
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -35,8 +35,10 @@
 #img_logo {
    /* height: 30%;
   width: 30%; */
-  width: 180px;
+  width: 160px;
   height: auto;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -122,7 +124,11 @@ nav {
   justify-content: flex-end;
   align-items: center;
   margin-right: 20px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
+
 
 .nav_items {
   flex-direction: column;
@@ -139,6 +145,7 @@ nav {
   height: 2px;
   background-color: #3B3C4F;
   transition: width 0.3s ease, left 0.3s ease;
+  
 }
 .nav-btn:hover {
   color: #7A7D81;
@@ -162,11 +169,275 @@ nav {
   padding: 12px 16px;
   z-index: 1;
   top: 100%;
-  left:-50px;
+  left:-20px; /*DIRECTION */
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+/* COLLECTION SECTION */
+.collection-section {
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px;
+  padding: 50px 0px;
+  text-align: center;
+  width: 100vw;
+  max-width: 100%;
+  object-fit: cover;
+  
+}
+
+
+.collection-item {
+  background:none;
+  box-shadow: none;
+  padding: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
+  align-items: flex-end; /* העברת הכיתוב לתחתית */
+  justify-content: center;
+  
+}
+
+.collection-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.collection-item:hover {
+  transform: scale(1.02);
+  filter: brightness(0.8);
+}
+
+.collection-item a {
+  position: absolute;
+  bottom: 20px; /* הצמדת הכיתוב לתחתית התמונה */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 30px 20px;
+  background: transparent; /* ביטול הרקע */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.collection-item a:hover {
+  color: #3B3C4F;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.collection-wrapper {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 0;
+  padding: 50px 0;
+  width: 100vw;
+  max-width: 100%;
+  scrollbar-width: none; /* הסתרת סרגל גלילה בפיירפוקס */
+  -ms-overflow-style: none; /* הסתרת סרגל גלילה באקספלורר */
+  scroll-behavior: smooth;
+}
+
+.collection-wrapper::-webkit-scrollbar {
+  display: none; /* הסתרת סרגל גלילה בכרום וספארי */
+}
+
+@media (max-width: 1024px) {
+  .collection-section {
+    grid-template-columns: repeat(2, 1fr); /* תמיד 2 פריטים בשורה במסכים קטנים */
+  }
+}
+@media (max-width: 600px) {
+  .collection-section {
+    grid-template-columns: repeat(2, 1fr); /* תמיד 2 פריטים בשורה גם במסכים קטנים יותר */
+  }
+  .collection-item a {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+}
+
+/* RESPONSIVE DESIGN - גלילה עם נקודות ניווט מתחת */
+@media (max-width: 600px) {
+  .collection-wrapper {
+    overflow-x: scroll;
+    display: flex;
+    scroll-snap-type: x mandatory;
+  }
+  .collection-section {
+    flex-wrap: nowrap;
+    display: flex;
+  }
+  .collection-item {
+    min-width: 100%; /* רק פריט אחד יוצג בכל פעם */
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative; /* שינוי מ-absolute כדי שלא יתקבעו למקום */
+    bottom: 10px;
+  }
+  
+  .pagination-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .pagination-dot.active {
+    background-color: #3B3C4F;
+  }
+}
+
+/* NEW DROP SECTION */
+.new-drop-section {
+  text-align: center;
+  padding: 50px 0;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #3B3C4F;
+  margin-bottom: 20px;
+}
+
+.new-drop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.new-drop-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.new-drop-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.new-drop-item:hover img {
+  transform: scale(1.05);
+}
+
+.view-more-container {
+  margin-top: 20px;
+}
+
+.view-more-btn {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #3B3C4F;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #3B3C4F;
+  transition: all 0.3s ease-in-out;
+}
+
+.view-more-btn:hover {
+  background: #3B3C4F;
+  color: #fff;
+}
+
+
+/* FOOTER */
+.footer {
+  background-color: #3B3C4F; /* שימוש בצבע הכחול מהלוגו */
+  color: #fff;
+  text-align: left; /* יישור כל התוכן לצד שמאל */
+  padding: 240px; /* התאמת ה-padding כדי למנוע שטח מיותר */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 1200px;
+  margin-left: -120px; /* הבאת התוכן לצד שמאל */
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #DBE4C9;
+}
+.footer-btn {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+  padding-bottom: 5px;
+}
+
+
+.footer-contact img {
+  width: 30px;
+  height: 30px;
+  content: url('./assets/img/shipping/email_4546924.png'); /* אייקון מייל */
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column; /* הצגת האלמנטים אחד מתחת לשני */
+  align-items: flex-start;
+  gap: 10px;
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* מרווח בין האייקון למייל */
+}
 
