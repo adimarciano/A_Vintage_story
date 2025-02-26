@@ -1,32 +1,72 @@
-div.shipping_img ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(3, auto)    
+div.shipping_img ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
 }
-div.shipping_img img{
-    height: 80%;
+div.shipping_img img {
+  height: 60%;
+  width: 70%;
+  text-align: center;
+}
+h2 {
+  margin-left: 15%;
+}
+
+h3 {
+  margin-top: 5%;
+  margin-left: 20%;
+}
+
+section ul {
+  margin-top: 5%;
+  margin-left: 20%;
+  list-style: none;
+}
+ul.ends {
+  margin-bottom: 30%;
+  text-align: center;
+  margin-left: -3%;
+
+}
+/* ACCORDION FOR SHIPPING POLICY */
+.accordion {
+    border: 1px solid rgba(59, 60, 79, 0.3); /* קו עדין */
+    margin: 10px auto;
+    border-radius: 5px;
+    overflow: hidden;
     width: 80%;
-}
-h2{
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .accordion-title {
+    background-color: transparent;
+    color: #3B3C4F;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(59, 60, 79, 0.3);
+  }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9f9f9;
+    padding: 0 15px;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+  
+  /* כשהמשתמש לוחץ, התוכן ייפתח */
 
-    margin-left: 15%; 
-}
-
-h3{
-    margin-top: 5%;
-    margin-left: 20%; 
-}
-
-section ul{
-    margin-top: 5%;
-    margin-left: 20%;
-    list-style: none;
-}
-ul.ends
-{
-    margin-bottom: 5%;
-
-}
+  .accordion input[type="checkbox"] {
+    display: none;
+  }
+  
+  .accordion input[type="checkbox"]:checked ~ .accordion-content {
+    max-height: 200px;
+    padding: 15px;
+  }
+  
