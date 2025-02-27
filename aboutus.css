@@ -1,0 +1,135 @@
+.nav-btn {
+    /* border: 0;
+      background-color: #c6e980;
+      border-radius: 8px;
+      font-weight: 500;
+      padding: 6px;
+      width: 150px;
+      cursor: pointer;  */
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    color: #3b3c4f;
+    position: relative;
+    transition: color 0.3s;
+  }
+  nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .nav_items {
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    gap: 50px;
+  }
+  .nav-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #3b3c4f;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  .nav-btn:hover {
+    color: #7a7d81;
+  }
+  
+  .nav-btn:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 80%;
+    margin: 50px auto;
+    gap: 40px;
+}
+
+
+.about-text {
+    text-align: left;
+    max-width: 100%;
+    width: 100%;
+    padding: 40px; /* יותר ריווח פנימי */
+}
+
+
+.about-text h1 {
+    font-size: 36px;
+    color: #3B3C4F;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #3B3C4F;
+    line-height: 1.5;
+}
+
+.about-image {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(100px);
+    animation: fadeIn 1s ease-out forwards;
+} 
+ .about-image, .about-image-left {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .about-image img, .about-image-left img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} */
+
+.fade-in-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-image-left {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: fadeInLeft 1s ease-out forwards;
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} 
