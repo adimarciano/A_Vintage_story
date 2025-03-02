@@ -408,7 +408,7 @@ nav {
   align-items: flex-start;
   gap: 15px;
   max-width: 1200px;
-  margin-left: -120px; /* הבאת התוכן לצד שמאל */
+  margin-left: -120px; /*תוכן מצד שמאל*/
 }
 
 .footer a {
@@ -448,4 +448,7 @@ nav {
   align-items: center;
   gap: 10px; /* מרווח בין האייקון למייל */
 }
+
+
+
 
