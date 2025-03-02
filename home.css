@@ -17,13 +17,14 @@
   background-color: #ffffff;
   justify-content: flex-start;
   padding: 20px 80px; 
-  position: sticky; /* הפיכת ההדר לסטיקי */
+  position: sticky; 
   top: 0;
   z-index: 1000;
 
-}
+} 
 
-.logo {
+
+ .logo {
   text-align: center;
   margin-bottom: 0px;
   display: flex;
@@ -34,36 +35,31 @@
 
 
 #img_logo {
-   /* height: 30%;
-  width: 30%; */
-  width: 160px;
+ /* height: 30%;
+  width: 30%;  */
+ width: 160px;
   height: auto;
   display: flex;
   align-items: center;
-}
+} 
 
 
 .hero {
   background-image: url("./assets/imeges/imeg2.jpeg");
   background-color: #cccccc; /* Used if the image is unavailable */
-   height: 500px; /* You must set a specified height */
+  height: 500px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; 
- height: 500px;
+  background-size: cover;
+  height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-} */
-
-.footer {
-  display: grid;
-  grid-template-columns: auto auto;
 }
-.main_div {
+*/ .main_div {
   height: 90%;
   overflow-y: scroll;
 }
@@ -93,8 +89,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color:#DBE4C9;
-  color: #3B3C4F;
+  background-color: #dbe4c9;
+  color: #3b3c4f;
   font-size: 16px;
   padding: 12px 24px;
   border: none;
@@ -109,13 +105,13 @@
   font-weight: 500;
   padding: 6px;
   width: 150px;
-  cursor: pointer;  */ 
+  cursor: pointer;  */
   border: none;
   background: transparent;
   font-weight: 600;
   font-size: 18px;
   cursor: pointer;
-  color: #3B3C4F;
+  color: #3b3c4f;
   position: relative;
   transition: color 0.3s;
 }
@@ -128,32 +124,35 @@ nav {
   margin: 0;
   padding: 0;
   height: 100%;
-}
+} 
+
+
 
 #hamburger {
   height: 100px;
-  width: 100px;  
+  width: 100px;
 }
 
-.nav_items {
+ .nav_items {
   flex-direction: column;
   align-items: center;
   margin-left: auto;
   gap: 50px;
-}
+} 
+
+
 .nav-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: -5px;
   width: 0;
   height: 2px;
-  background-color: #3B3C4F;
+  background-color: #3b3c4f;
   transition: width 0.3s ease, left 0.3s ease;
-  
 }
 .nav-btn:hover {
-  color: #7A7D81;
+  color: #7a7d81;
 }
 
 .nav-btn:hover::after {
@@ -166,6 +165,7 @@ nav {
 }
 
 .dropdown-content {
+
   display: none;
   position: absolute;
   background-color: #fff;
@@ -174,7 +174,9 @@ nav {
   z-index: 1;
   top: 100%;
   left:-20px; /*DIRECTION */
+
 }
+
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -190,12 +192,10 @@ nav {
   width: 100vw;
   max-width: 100%;
   object-fit: cover;
-  
 }
 
-
 .collection-item {
-  background:none;
+  background: none;
   box-shadow: none;
   padding: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -208,7 +208,6 @@ nav {
   width: 100%;
   align-items: flex-end; /* העברת הכיתוב לתחתית */
   justify-content: center;
-  
 }
 
 .collection-item img {
@@ -243,9 +242,8 @@ nav {
   transition: transform 0.3s ease-in-out;
 }
 
-
 .collection-item a:hover {
-  color: #3B3C4F;
+  color: #3b3c4f;
 }
 
 @keyframes fadeInUp {
@@ -278,12 +276,18 @@ nav {
 
 @media (max-width: 1024px) {
   .collection-section {
-    grid-template-columns: repeat(2, 1fr); /* תמיד 2 פריטים בשורה במסכים קטנים */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* תמיד 2 פריטים בשורה במסכים קטנים */
   }
 }
 @media (max-width: 600px) {
   .collection-section {
-    grid-template-columns: repeat(2, 1fr); /* תמיד 2 פריטים בשורה גם במסכים קטנים יותר */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* תמיד 2 פריטים בשורה גם במסכים קטנים יותר */
   }
   .collection-item a {
     font-size: 20px;
@@ -292,7 +296,6 @@ nav {
 }
 
 .menu {
-
 }
 
 /* RESPONSIVE DESIGN - גלילה עם נקודות ניווט מתחת */
@@ -316,7 +319,7 @@ nav {
     position: relative; /* שינוי מ-absolute כדי שלא יתקבעו למקום */
     bottom: 10px;
   }
-  
+
   .pagination-dot {
     width: 12px;
     height: 12px;
@@ -327,7 +330,7 @@ nav {
     transition: background-color 0.3s;
   }
   .pagination-dot.active {
-    background-color: #3B3C4F;
+    background-color: #3b3c4f;
   }
 }
 
@@ -341,7 +344,7 @@ nav {
 .section-title {
   font-size: 28px;
   font-weight: bold;
-  color: #3B3C4F;
+  color: #3b3c4f;
   margin-bottom: 20px;
 }
 
@@ -377,38 +380,33 @@ nav {
   display: inline-block;
   font-size: 18px;
   font-weight: 600;
-  color: #3B3C4F;
+  color: #3b3c4f;
   text-decoration: none;
   padding: 10px 20px;
-  border: 2px solid #3B3C4F;
+  border: 2px solid #3b3c4f;
   transition: all 0.3s ease-in-out;
 }
 
 .view-more-btn:hover {
-  background: #3B3C4F;
+  background: #3b3c4f;
   color: #fff;
 }
-
 
 /* FOOTER */
 .footer {
-  background-color: #3B3C4F; /* שימוש בצבע הכחול מהלוגו */
+  background-color: #3b3c4f;
   color: #fff;
-  text-align: left; /* יישור כל התוכן לצד שמאל */
-  padding: 240px; /* התאמת ה-padding כדי למנוע שטח מיותר */
+  padding: 190px;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* מחלק לשני חלקים */
+  align-items: start; /* מוודא שהכל מיושר למעלה ולא נדחק למטה */
 }
-.footer-container {
+
+.footer-about {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-  max-width: 1200px;
-  margin-left: -120px; /*תוכן מצד שמאל*/
+  gap: 15px; /* רווח בין הקישורים */
 }
 
 .footer a {
@@ -419,7 +417,7 @@ nav {
 }
 
 .footer a:hover {
-  color: #DBE4C9;
+  color: #dbe4c9;
 }
 .footer-btn {
   font-size: 18px;
@@ -431,24 +429,25 @@ nav {
   padding-bottom: 5px;
 }
 
-
 .footer-contact img {
   width: 30px;
   height: 30px;
-  content: url('./assets/img/shipping/email_4546924.png'); /* אייקון מייל */
 }
 .footer-contact {
   display: flex;
-  flex-direction: column; /* הצגת האלמנטים אחד מתחת לשני */
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-end;
   gap: 10px;
 }
+
 .contact-info {
   display: flex;
   align-items: center;
-  gap: 10px; /* מרווח בין האייקון למייל */
+  gap: 10px;
 }
-
-
-
-
+.footer-credit {
+  text-align: left;
+  font-size: 14px;
+  color: #dbe4c9;
+  margin-top: 50px;
+}
