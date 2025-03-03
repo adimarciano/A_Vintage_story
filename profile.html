@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Vintage Story</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
-</head>
-<body>
-  <header class="header">
-    <div class="logo">
-      <a href="./index.html">
-        <img id="img_logo" src="./assets/img/logo V.svg" alt="logo A Vintage Story">
-      </a>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
 
-    </div>
+  <body>
+     <header class="header">
+        <div class="logo">
+          <a href="./index.html">
+            <img id="img_logo" src="./assets/img/logo V.svg" alt="logo A Vintage Story">
+          </a>
+        </div>
+        <div class="p_icon">
+          <a href="./index.html">
+            <img id="img_p" src="./assets/img/profile.svg" alt="proile icon button">
+          </a>
+        </div>
     <nav>
       <label for="menu">
         <img src="./assets/img/navbar.svg" alt="menu" id="hamburger">
       </label>
       <input type="checkbox" id="menu"/>
       <ul class="nav_items">
+
+        <section class="profile_page">
+
+          <div class="p_pic">
+            <img src="./assets/img/mia profile pic.jpg" alt="profile pic" id="prop">
+
+          </div>
+          <h4>mia marciano</h4>
+          <div class="profile_info">
+            <p>Birthday</p>
+            <p>Phone Number</p>
+            <p>Gmail</p>
+            <p>Shipping Address</p>
+          </div>
+        </section>
     
         <div class="dropdown">
           <ul>
             <li>
-              <button class="nav-btn">
-                COLLECTIONS
-              </button>
+              <a href="./collections.html">
+                <button class="nav-btn">
+                  COLLECTIONS
+                </button>
+              </a>
             </li>
           </ul>
           <div class="dropdown-content">
             <a href="#">JACKETS</a>
-            <a href="#">TOPS</a>
+            <a href="./tops.html">TOPS</a>
             <a href="#">BOTTOMS</a>
             <a href="#">SHOES</a>
             <a href="#">BAGS</a>
@@ -47,26 +68,56 @@
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="./shipping.html">
             <button class="nav-btn">
               SHIPPING & RETURNS
             </button>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="./aboutus.html">
             <button class="nav-btn">
-              MY ACCOUNT
+              ABOUT US
             </button>
           </a>
         </li>
       </ul>
     </nav>
-  </header>
-    <footer class="footer">
-        <p>&copy; 2025</p>
-        <p>A Vintage Story</p>
-    </footer>
+  </header> 
+
+
+</section>
+<footer class="footer">
+  <!-- אזור ABOUT US בשמאל -->
+  <div class="footer-about">
+      <a href="./aboutus.html" class="footer-btn">ABOUT US</a>  
+      <a href="./login.html" class="footer-btn">LOG IN</a>  
+      <a href="./profile.html" class="footer-btn">MY ACCOUNT</a>  
+  </div>
+  <!-- אזור CONTACT US בימין -->
+  <div class="footer-contact">
+    <div class="contact-title">
+      <span>CONTACT US</span>
+    </div>
+    <div class="contact-info">
+      <span>Vintagestory@gmail.com</span>
+      <img src="./assets/img/shipping/email_4546924.png" alt="email Icon">
+    </div>
+    <div class="contact-info">
+      <span>Vintage_story</span>
+      <img src="./assets/img/insta.svg" alt="insta Icon">
+    </div>
+    <div class="contact-info">
+      <span>Vintage_story</span>
+      <img src="./assets/img/tiktok.svg" alt="tiktok Icon">
+    </div>
     
+  </div>
+  <div class="footer-credit">
+    <p>&copy; 2025 Vintage Story </p>
+</div>
+</footer>
+
+</div>
 </body>
 </html>

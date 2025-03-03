@@ -34,12 +34,13 @@ ul.ends {
 /* ACCORDION FOR SHIPPING POLICY */
 .accordion {
     border: 1px solid rgba(59, 60, 79, 0.3); /* קו עדין */
-    margin: 10px auto;
+    margin: 20px auto;
     border-radius: 5px;
     overflow: hidden;
     width: 80%;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
   }
   
   .accordion-title {
