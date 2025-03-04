@@ -25,6 +25,22 @@
 
 
 
+.p_icon {
+  text-align:right;
+  margin-bottom: 0px;
+  display: flex;
+  align-items: right;
+
+
+}
+
+
+#img_p {
+ width: 50px;
+  height: auto;
+  display: flex;
+
+} 
  .logo {
   text-align: center;
   margin-bottom: 0px;
@@ -44,24 +60,6 @@
   align-items: center;
 } 
 
-.p_icon {
-  text-align:left;
-  margin-bottom: 0px;
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  margin-right: auto;
-}
-
-
-#img_p {
- /* height: 30%;
-  width: 30%;  */
- width: 50px;
-  height: auto;
-  display: flex;
-  align-items: left;
-} 
 
 
 
