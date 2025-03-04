@@ -1,6 +1,27 @@
 #prop{
-    width: 30%;
+    width: 60%;
     height: auto;
-    border-radius: 100%;
-    border-color:#3B3C4F;
+    border: 5px solid #3B3C4F;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.profile_page{
+    display: grid;
+    grid-template-columns: 30% auto 20% ; 
+    margin: 30px;
+}
+.profile_info {
+    padding-right: 10px;
+    margin-right: 10px;
+    background-color: #ddedad;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: auto auto auto auto;
+
+
+}
+
+
+.p_bold{
+    font-weight: bold;
 }
