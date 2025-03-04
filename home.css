@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-.header {
+/* .header {
   height: 10%;
   width: 100%;
   display: flex;
@@ -21,24 +21,44 @@
   top: 0;
   z-index: 1000;
 
-} 
+}  */
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+}
 
 
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* לוגו - ניווט - אייקון פרופיל */
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
-.p_icon {
+
+/* .p_icon {
   text-align:right;
   margin-bottom: 0px;
   display: flex;
   align-items: right;
+  justify-content: flex-end;
 
-
+} */
+.p_icon {
+  display: flex;
+  justify-content: flex-end;
 }
 
 
 #img_p {
- width: 50px;
+ width: 40px;
   height: auto;
-  display: flex;
 
 } 
  .logo {
@@ -144,7 +164,10 @@ nav {
   padding: 0;
   height: 100%;
 } 
-
+.nav-bar {
+  display: flex;
+  justify-content: center;
+}
 
 
 #hamburger {
@@ -153,12 +176,21 @@ nav {
 
 }
 
- .nav_items {
+ /* .nav_items {
   flex-direction: column;
   align-items: center;
   margin-left: auto;
   gap: 50px;
-} 
+}  */
+.nav_items {
+
+  justify-content: center; /* מצמיד למרכז */
+  align-items: center;
+  gap: 40px; /* רווחים בין הכפתורים */
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* מחייב להיות במרכז */
+}
 
 
 .nav-btn::after {
