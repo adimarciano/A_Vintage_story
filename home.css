@@ -29,6 +29,7 @@
   top: 0;
   z-index: 1000;
   padding: 10px 20px;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 
@@ -113,30 +114,29 @@
   background-position: center;
 }
 
-.register-button-container {
-  margin: 6px;
-  overflow: hidden;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
 
 .register-button-container .btn {
   position: absolute;
-  top: 65%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #dbe4c9;
-  color: #3b3c4f;
+  background: transparent; /* הפיכת הרקע לשקוף */
+  color: #3b3c4f; 
   font-size: 16px;
+  font-weight: 700;
   padding: 12px 24px;
-  border: none;
+  border: 2px solid #dbe4c9; 
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 0; 
+  transition: all 0.3s ease-in-out; 
 }
 
+/* עיצוב כשהעכבר עובר על הכפתור */
+.register-button-container .btn:hover {
+  background-color: #dbe4c9; /* צבע ירוק מהלוגו */
+  color: #3b3c4f; 
+}
 .nav-btn {
   /* border: 0;
   background-color: #c6e980;
@@ -503,3 +503,46 @@ nav {
   color: #dbe4c9;
   margin-top: 50px;
 }
+/* FEATURES SECTION */
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* שלושה עמודות */
+  gap: 10px; 
+  justify-items: center; /* ממקם את כל האלמנטים במרכז */
+  text-align: center; 
+  padding: 20px 0; 
+  width: 80%; /* מתאים לרוחב מסך */
+  margin: 0 auto;
+  padding-right: 40px;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  width: 100%; 
+}
+.feature img {
+  width: 50px; 
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  color: #3b3c4f; 
+  margin-top: 10px; 
+  text-align: center;
+  width: 100%;
+  padding-right: 60px;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #7a7d81; 
+  max-width: 250px;
+  text-align: center;
+  max-width: 250px;
+  
+}
+
