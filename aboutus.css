@@ -1,53 +1,5 @@
-.nav-btn {
-    /* border: 0;
-      background-color: #c6e980;
-      border-radius: 8px;
-      font-weight: 500;
-      padding: 6px;
-      width: 150px;
-      cursor: pointer;  */
-    border: none;
-    background: transparent;
-    font-weight: 600;
-    font-size: 18px;
-    cursor: pointer;
-    color: #3b3c4f;
-    position: relative;
-    transition: color 0.3s;
-  }
-  nav {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 20px;
-  }
-  
-  .nav_items {
-    flex-direction: column;
-    align-items: center;
-    margin-left: auto;
-    gap: 50px;
-  }
-  .nav-btn::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #3b3c4f;
-    transition: width 0.3s ease, left 0.3s ease;
-  }
-  .nav-btn:hover {
-    color: #7a7d81;
-  }
-  
-  .nav-btn:hover::after {
-    width: 100%;
-    left: 0;
-  }
-  .about-container {
+
+.about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
