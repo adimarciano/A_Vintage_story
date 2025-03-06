@@ -311,111 +311,94 @@ nav {
   }
 }
 
-.collection-wrapper {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  gap: 0;
-  padding: 50px 0;
-  width: 100vw;
-  max-width: 100%;
-  scrollbar-width: none; /* הסתרת סרגל גלילה בפיירפוקס */
-  -ms-overflow-style: none; /* הסתרת סרגל גלילה באקספלורר */
-  scroll-behavior: smooth;
-}
 
 .collection-wrapper::-webkit-scrollbar {
   display: none; /* הסתרת סרגל גלילה בכרום וספארי */
 }
-
-@media (max-width: 1024px) {
+@media (max-width: 1026px) {
   .collection-section {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* תמיד 2 פריטים בשורה במסכים קטנים */
+    grid-template-columns: repeat(2, 1fr); /* 2 טורים במסכים בינוניים */
+    gap: 15px;
+    padding: 30px; 
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 1020px) and (min-width: 680px) {
   .collection-section {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* תמיד 2 פריטים בשורה גם במסכים קטנים יותר */
-  }
-  .collection-item a {
-    font-size: 20px;
-    padding: 10px 0;
+    grid-template-columns: repeat(2, 1fr); /* שומר על 2 טורים */
+    gap: 20px;
+    padding: 40px; 
+    width: 90%; 
+    max-width: 800px; 
+    margin: 0 auto;
   }
 }
-
-/* RESPONSIVE DESIGN - גלילה עם נקודות ניווט מתחת */
-@media (max-width: 600px) {
-  .collection-wrapper {
-    overflow-x: scroll;
-    display: flex;
-    scroll-snap-type: x mandatory;
-  }
+/* מסכים קטנים */
+@media (max-width: 680px) {
   .collection-section {
-    flex-wrap: nowrap;
-    display: flex;
+    grid-template-columns: 1fr; /* טור אחד במסכים קטנים */
+    padding: 20px; /* מוודא שיש רווח מהקצוות */
+    width: 90%; /* לא 100%, כדי שלא יידבק */
+    max-width: 400px; 
+    margin: 0 auto; /* ממורכז תמיד */
   }
+
   .collection-item {
-    min-width: 100%; /* רק פריט אחד יוצג בכל פעם */
-    height: 400px;
-  }
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    position: relative; /* שינוי מ-absolute כדי שלא יתקבעו למקום */
-    bottom: 10px;
+    width: 100%;
+    height: auto;
   }
 
-  .pagination-dot {
-    width: 12px;
-    height: 12px;
-    background-color: #bbb;
-    border-radius: 50%;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  .pagination-dot.active {
-    background-color: #3b3c4f;
+  .collection-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
+
 
 /* NEW DROP SECTION */
 .new-drop-section {
   text-align: center;
   padding: 50px 0;
   width: 100%;
+  overflow: hidden;
 }
 
-.section-title {
-  font-size: 28px;
-  font-weight: bold;
-  color: #3b3c4f;
-  margin-bottom: 20px;
+.new-drop-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .new-drop-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(8, 1fr); /* התאמת מספר העמודות */
   gap: 15px;
   max-width: 1200px;
-  margin: 0 auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.new-drop-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .new-drop-item {
   position: relative;
   overflow: hidden;
+  scroll-snap-align: center;
+  width: 300px; /* מתאים לרוחב של פריטים */
+  height: 400px; 
 }
 
 .new-drop-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
@@ -424,11 +407,45 @@ nav {
   transform: scale(1.05);
 }
 
-.view-more-container {
-  margin-top: 20px;
+/* כפתורי הגלילה */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  z-index: 10;
+  transition: background 0.3s ease-in-out;
 }
 
-.view-more-btn {
+/* מרווח בין הכותרת לתמונות */
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #3b3c4f;
+  margin-bottom: 40px; /* הגדלנו את המרווח */
+}
+
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-btn {
+  left: 0;
+}
+
+.right-btn {
+  right: 0;
+}
+
+
+
+/* .view-more-btn {
   display: inline-block;
   font-size: 18px;
   font-weight: 600;
@@ -442,7 +459,15 @@ nav {
 .view-more-btn:hover {
   background: #3b3c4f;
   color: #fff;
+} */
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .new-drop-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
 }
+
 
 /* FOOTER */
 .footer {
