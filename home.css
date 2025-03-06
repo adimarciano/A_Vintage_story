@@ -238,7 +238,7 @@ nav {
 /* COLLECTION SECTION */
 .collection-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   gap: 6px;
   padding: 50px 0px;
   text-align: center;
@@ -512,7 +512,7 @@ nav {
 /* FEATURES SECTION */
 .features-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(400px,1fr)); 
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); 
   gap: 10px;
   justify-items: center; /* ממקם את כל האלמנטים במרכז */
   text-align: center;
