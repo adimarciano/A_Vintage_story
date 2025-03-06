@@ -1,0 +1,114 @@
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    align-items: center;
+    width: 80%;
+    margin: 50px auto;
+    gap: 50px;
+    gap: 50px;
+            width: 80%;
+            margin: 50px auto;
+            align-items: center;
+}
+
+/* .contact-container {
+    width: 50%;
+    padding: 30px;
+    border: 1px solid #efefef;
+    background-color: #f9f9f9;
+    text-align: left;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+} */
+.contact-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border: 1px solid #efefef;
+    background-color: #f9f9f9;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-container h2 {
+    text-align: center;
+    width: 100%;
+}
+form {
+    width: 100%;
+}
+/* .contact-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+} */
+.contact-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+}
+.contact-btn {
+    background-color: #efefef; /* צבע עדין שמתאים ללוגו */
+    color: #3b3c4f;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.contact-btn:hover {
+    background-color: #3b3c4f; /* צבע hover מותאם ללוגו */
+    transform: translateY(-2px);
+    color: #efefef;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+.contact-info {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-info h2 {
+    margin-bottom: 10px;
+    text-align: left;
+    color: #B93A3A;
+}
+.contact-info p {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 18px;
+    
+}
+ /* רספונסיביות */
+ @media (max-width: 768px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 30px;
+    }
+    .contact-container {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .contact-info {
+        text-align: center;
+        align-items: center;
+    }
+    .contact-info h2, .contact-info p {
+        text-align: center;
+    }
+}
