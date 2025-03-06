@@ -112,6 +112,60 @@
   background-color: #dbe4c9; /* צבע ירוק מהלוגו */
   color: #3b3c4f; 
 }
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Style the hamburger icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+}
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: black;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* Hide menu by default */
+.nav-items {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background: white;
+  width: 100%;
+  left: 0;
+  top: 60px;
+  padding: 15px;
+}
+
+/* Show menu when checkbox is checked */
+#menu-toggle:checked ~ .nav-items {
+  display: flex;
+}
+
+/* Mobile styles */
+@media (min-width: 769px) {
+  .nav-items {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      background: none;
+      width: auto;
+      padding: 0;
+  }
+
+  .hamburger {
+      display: none;
+  }
+}
+
 .nav-btn {
   /* border: 0;
   background-color: #c6e980;
