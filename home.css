@@ -6,6 +6,7 @@
   padding: 0;
 }
 .header {
+  flex-direction: column; 
   width: 100%;
   background-color: #ffffff;
   position: sticky;
@@ -35,17 +36,18 @@
 }
 .logo {
   text-align: center;
+  justify-content: center; 
   margin-bottom: 0px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   margin-right: auto;
 }
 
 #img_logo {
   /* height: 30%;
   width: 30%;  */
-  width: 160px;
+  width: 180px;
   height: auto;
   display: flex;
   align-items: center;
@@ -139,9 +141,50 @@
     justify-content: space-around;
     width: 100%;
   }
-
   .hamburger {
     display: none;
+    
+  }
+}
+@media (max-width: 768px) {
+  .nav-items {
+    display: none; /* התפריט מוסתר כברירת מחדל */
+    position: absolute;
+    top: 100%; /* מוודא שהוא יופיע מתחת להמבורגר */
+    right: 10%; /* ממוקם באמצע המסך */
+    width: 40%;
+    background: #dbe4c9;
+    padding: 50px 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* כשההמבורגר נלחץ - הצגת התפריט */
+  #menu-toggle:checked ~ .nav-items {
+    display: flex;
+  }
+
+  .hamburger {
+    /* display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    gap: 5px; */
+    position: absolute;
+    left: 20px; /* מעביר את ההמבורגר לצד שמאל */
+    top: 15px;
+     /* מעביר את ההמבורגר אחרי הלוגו */
+    margin-top: 70px; 
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background: black;
+    transition: 0.3s;
   }
 }
 
@@ -462,28 +505,97 @@ nav {
 } */
 
 /* רספונסיביות */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .new-drop-grid {
       grid-template-columns: repeat(3, 1fr);
   }
+} */
+@media (max-width: 768px) {
+  .new-drop-container {
+    overflow-x: auto; /* מאפשר גלילה אופקית */
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .new-drop-grid {
+    display: flex; /* משנה לגריד אופקי */
+    flex-wrap: nowrap;
+    gap: 10px;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .new-drop-item {
+    flex: 0 0 auto; /* מונע מתיחה */
+    width: 250px; /* מתאים למובייל */
+    height: 350px;
+  }
 }
+
 
 
 /* FOOTER */
 .footer {
   background-color: #3b3c4f;
   color: #fff;
-  padding: 190px;
-  width: 100vw;
+  padding: 60px 80px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr; /* מחלק לשני חלקים */
   align-items: start; /* מוודא שהכל מיושר למעלה ולא נדחק למטה */
 }
-@media(max-width: 600px){
-  .footer{
-    padding: 20px;
+/* מניעת גלילה צדדית */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* רספונסיביות - מסכים קטנים */
+@media (max-width: 600px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
   }
 
+  .contact-title {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-credit {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1042px) {
+  .footer {
+    grid-template-columns: 1fr; /* במקום 2 עמודות, עמודה אחת */
+    text-align: center;
+    padding: 40px; /* יותר נוח לטאבלטים */
+    max-width: 100%;
+  }
+
+  .contact-title {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* שומר את הכפתור במרכז */
+    margin-bottom: 10px; /* מוסיף רווח קטן לפני האייקונים */
+  }
+
+  .contact-info {
+    justify-content: center;
+    width: 100%;
+  }
+}
+/* מניעת גלילה צדדית */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .footer-about {
@@ -574,4 +686,18 @@ nav {
   max-width: 250px;
   text-align: center;
   max-width: 250px;
+}
+@media (max-width: 900px) {
+  .features-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* רספונסיביות - מסכים קטנים (פריט אחד בשורה) */
+@media (max-width: 769px) {
+  .features-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
