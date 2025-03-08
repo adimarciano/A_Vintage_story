@@ -20,7 +20,7 @@
     text-align: left;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 } */
-.contact-container {
+.contactpage-container {
     width: 100%;
     max-width: 500px;
     padding: 30px;
@@ -75,19 +75,19 @@ form {
     color: #efefef;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
 }
-.contact-info {
+.contactpage-info {
     padding: 20px;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.contact-info h2 {
+.contactpage-info h2 {
     margin-bottom: 10px;
     text-align: left;
     color: #B93A3A;
 }
-.contact-info p {
+.contactpage-info p {
     text-align: left;
     line-height: 1.6;
     font-size: 18px;
@@ -104,7 +104,7 @@ form {
         max-width: 100%;
         padding: 20px;
     }
-    .contact-info {
+    .contactpage-info {
         text-align: center;
         align-items: center;
     }

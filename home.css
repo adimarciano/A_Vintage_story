@@ -6,10 +6,10 @@
   padding: 0;
 }
 .header {
-  flex-direction: column; 
+  flex-direction: column;
   width: 100%;
   background-color: #ffffff;
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 1000;
   padding: 10px 20px;
@@ -23,6 +23,7 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  position: sticky;
 }
 
 .p_icon {
@@ -36,7 +37,7 @@
 }
 .logo {
   text-align: center;
-  justify-content: center; 
+  justify-content: center;
   margin-bottom: 0px;
   display: flex;
   align-items: center;
@@ -53,10 +54,9 @@
   align-items: center;
 }
 
-
 */ .main_div {
   height: 90%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 * #backimg {
@@ -143,7 +143,6 @@
   }
   .hamburger {
     display: none;
-    
   }
 }
 @media (max-width: 768px) {
@@ -153,7 +152,7 @@
     top: 100%; /* מוודא שהוא יופיע מתחת להמבורגר */
     right: 10%; /* ממוקם באמצע המסך */
     width: 40%;
-    background: #F9F8F6;
+    background: #f9f8f6;
     padding: 60px 20px;
     border: 1px solid #ccc;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -161,7 +160,7 @@
     align-items: center;
     gap: 20px;
   }
-  
+
   /* כשההמבורגר נלחץ - הצגת התפריט */
   #menu-toggle:checked ~ .nav-items {
     display: flex;
@@ -176,8 +175,8 @@
     position: absolute;
     left: 20px; /* מעביר את ההמבורגר לצד שמאל */
     top: 15px;
-     /* מעביר את ההמבורגר אחרי הלוגו */
-    margin-top: 70px; 
+    /* מעביר את ההמבורגר אחרי הלוגו */
+    margin-top: 70px;
   }
 
   .hamburger span {
@@ -276,24 +275,22 @@ nav {
 
 .dropdown:hover .dropdown-content {
   display: block;
-  
 }
 .dropdown-content a:hover {
-  background-color: #3b3c4f !important;/* כחול כמו בלוגו */
+  background-color: #3b3c4f !important; /* כחול כמו בלוגו */
   color: white; /* הכתב הופך ללבן */
   transition: all 0.3s ease-in-out; /* מעבר חלק */
 }
 /* COLLECTION SECTION */
 .collection-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 6px;
   padding: 50px 0px;
   text-align: center;
   width: 100vw;
   max-width: 100%;
   object-fit: cover;
-
 }
 
 .collection-item {
@@ -359,7 +356,6 @@ nav {
   }
 }
 
-
 .collection-wrapper::-webkit-scrollbar {
   display: none; /* הסתרת סרגל גלילה בכרום וספארי */
 }
@@ -367,16 +363,16 @@ nav {
   .collection-section {
     grid-template-columns: repeat(2, 1fr); /* 2 טורים במסכים בינוניים */
     gap: 15px;
-    padding: 30px; 
+    padding: 30px;
   }
 }
 @media (max-width: 1020px) and (min-width: 680px) {
   .collection-section {
     grid-template-columns: repeat(2, 1fr); /* שומר על 2 טורים */
     gap: 20px;
-    padding: 40px; 
-    width: 90%; 
-    max-width: 800px; 
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
     margin: 0 auto;
   }
 }
@@ -386,7 +382,7 @@ nav {
     grid-template-columns: 1fr; /* טור אחד במסכים קטנים */
     padding: 20px; /* מוודא שיש רווח מהקצוות */
     width: 90%; /* לא 100%, כדי שלא יידבק */
-    max-width: 400px; 
+    max-width: 400px;
     margin: 0 auto; /* ממורכז תמיד */
   }
 
@@ -401,7 +397,6 @@ nav {
     object-fit: cover;
   }
 }
-
 
 /* NEW DROP SECTION */
 .new-drop-section {
@@ -441,7 +436,7 @@ nav {
   overflow: hidden;
   scroll-snap-align: center;
   width: 300px; /* מתאים לרוחב של פריטים */
-  height: 400px; 
+  height: 400px;
 }
 
 .new-drop-item img {
@@ -478,7 +473,6 @@ nav {
   margin-bottom: 40px; /* הגדלנו את המרווח */
 }
 
-
 .scroll-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -490,8 +484,6 @@ nav {
 .right-btn {
   right: 0;
 }
-
-
 
 /* .view-more-btn {
   display: inline-block;
@@ -539,8 +531,6 @@ nav {
   }
 }
 
-
-
 /* FOOTER */
 .footer {
   background-color: #3b3c4f;
@@ -552,7 +542,8 @@ nav {
   align-items: start; /* מוודא שהכל מיושר למעלה ולא נדחק למטה */
 }
 /* מניעת גלילה צדדית */
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -598,7 +589,8 @@ html, body {
   }
 }
 /* מניעת גלילה צדדית */
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -632,18 +624,39 @@ html, body {
 .footer-contact img {
   width: 30px;
   height: 30px;
+
+  height: auto;
+  display: inline-flex; /* מוודא שהאייקון נשאר על השורה */
+  flex-shrink: 0; /* מונע מהאייקון להתכווץ */
 }
 .footer-contact {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
+  width: 100%;
 }
 
-.contact-info {
+/* .contact-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  justify-content: flex-end;
+  white-space: nowrap; 
+} */
+.contact-info {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px !important;
+  white-space: nowrap !important;
+  justify-content: flex-end !important;
+}
+.contact-info span {
+  display: inline-flex; /* מבטיח שהמלל לא יישבר לשורה */
+    font-size: 14px;
+    color: white;
+    align-items: center;
 }
 .footer-credit {
   text-align: left;
@@ -654,14 +667,14 @@ html, body {
 /* FEATURES SECTION */
 .features-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
   justify-items: center; /* ממקם את כל האלמנטים במרכז */
   text-align: center;
   padding: 20px 0;
-  width: 80%; /* מתאים לרוחב מסך */
+  width: 70%; /* מתאים לרוחב מסך */
   margin: 0 auto;
-  padding-right: 40px;
+  padding-right: 20px;
 }
 .feature {
   display: flex;

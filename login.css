@@ -46,7 +46,7 @@ h2 {
   border: 1px solid #7a7d81;
 }
 
-.log-in-btn {
+/* .log-in-btn {
   margin: 20px 0;
   padding: 10px;
   width: 100%;
@@ -56,8 +56,27 @@ h2 {
   font-weight: 500;
   cursor: pointer;
   font-size: 16px;
+} */
+.log-in-btn {
+  margin: 20px 0;
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #3b3c4f; /* מסגרת כהה */
+  background-color: #DBE4C9; /* ירוק עדין */
+  border-radius: 0; /* ללא עיגול */
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  color: #3b3c4f; /* צבע טקסט כהה */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+/* כשהעכבר עובר - הכפתור נהיה שקוף והטקסט הופך לכחול */
+.log-in-btn:hover {
+  background-color: transparent; /* הופך לשקוף */
+  color: #3b3c4f; /* כחול של הלוגו */
+  border-color: #3b3c4f; /* משנה גם את הצבע של המסגרת */
+}
 .register-link {
   text-decoration: none;
   color: #535bf5;
