@@ -5,6 +5,7 @@ div.shipping_img ul {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(3, auto);
+  margin-top: 30px;
 }
 div.shipping_img img {
   height: 60%;

@@ -14,59 +14,54 @@
       <a href="./index.html">
         <img id="img_logo" src="./assets/img/logo V.svg" alt="logo A Vintage Story">
       </a>
-
+    </div>
+    <div class="p_icon">
+      <a href="./profile.html">
+        <img id="img_p" src="./assets/img/profile.svg" alt="profile icon button">
+      </a>
     </div>
     <nav>
-      <label for="menu">
-        <img src="./assets/img/navbar.svg" alt="menu" id="hamburger">
-      </label>
-      <input type="checkbox" id="menu"/>
-      <ul class="nav_items">
-    
-        <div class="dropdown">
-          <ul>
-            <li>
-              <button class="nav-btn">
-                COLLECTIONS
-              </button>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="nav-items">
+            <li class="dropdown">
+                
+                    <button class="nav-btn">COLLECTIONS</button>
+                </a>
+                <div class="dropdown-content">
+                    <a href="./Jackets.html">JACKETS</a>
+                    <a href="./tops.html">TOPS</a>
+                    <a href="./Bottoms.html">BOTTOMS</a>
+                    <a href="./Shoes.html">SHOES</a>
+                    <a href="./Accessories.html">ACCESSORIES</a>
+                </div> 
             </li>
-          </ul>
-          <div class="dropdown-content">
-            <a href="#">JACKETS</a>
-            <a href="#">TOPS</a>
-            <a href="#">BOTTOMS</a>
-            <a href="#">SHOES</a>
-            <a href="#">BAGS</a>
-            <a href="./Accessories.html">ACCESSORIES</a>
-          </div>          
-        </div>
-        <li>
-          <a href="./login.html">
-            <button class="nav-btn">
-              LOGIN
-            </button>  
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <button class="nav-btn">
-              SHIPPING & RETURNS
-            </button>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <button class="nav-btn">
-              MY ACCOUNT
-            </button>
-          </a>
-        </li>
-      </ul>
+            <li>
+                <a href="./login.html">
+                    <button class="nav-btn">LOGIN</button>  
+                </a>
+            </li>
+            <li>
+                <a href="./shipping.html">
+                    <button class="nav-btn">SHIPPING & RETURNS</button>
+                </a>
+            </li>
+            <li>
+                <a href="./aboutus.html">
+                    <button class="nav-btn">ABOUT US</button>
+                </a>
+            </li>
+        </ul>
     </nav>
-  </header>
+</header>
+
 <body>
-  <h2>LOG IN</h2>
   <form action="./profile.html" class="login-container">
+    <h2>LOG IN</h2>
       <label for="email" >Email</label>
       <input id="email" type="text" placeholder="example@email.com..." class="log-in-input" required >
       <label for="password" >Password</label>
@@ -75,6 +70,36 @@
    
       <a class="register-link" href="./register.html">Don't have an account? Sign Up Here!</a>
 </form>
+<footer class="footer">
+  <!-- אזור ABOUT US בשמאל -->
+  <div class="footer-about">
+      <a href="./aboutus.html" class="footer-btn">ABOUT US</a>  
+      <a href="./login.html" class="footer-btn">LOG IN</a>  
+      <a href="./profile.html" class="footer-btn">MY ACCOUNT</a>  
+  </div>
+  <!-- אזור CONTACT US בימין -->
+  <div class="footer-contact">
+    <div class="contact-title">
+      <a href="./contactus.html" class="footer-btn">CONTACT US</a> 
+    </div>
+    <div class="contact-info">
+      <span>Vintagestory@gmail.com</span>
+      <img src="./assets/img/shipping/email_4546924.png" alt="email Icon">
+    </div>
+    <div class="contact-info">
+      <span>Vintage_story</span>
+      <img src="./assets/img/insta.svg" alt="insta Icon">
+    </div>
+    <div class="contact-info">
+      <span>Vintage_story</span>
+      <img src="./assets/img/tiktok.svg" alt="tiktok Icon">
+    </div>
+    
+  </div>
+  <div class="footer-credit">
+    <p>&copy; 2025 Vintage Story </p>
+</div>
+</footer>
 </body>
 
 </html>

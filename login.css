@@ -27,10 +27,17 @@ body {
   align-items: start;
   background: rgba(255, 255, 255, 0.85);
   animation: slideIn 1s ease-in-out;
+  margin-bottom: 100px
 
 }
-h2 {
+.login-container h2 {
+  margin-top: 80px; /* מרווח רק בדף ה-Login */
+  
+}
+
+h2{
   margin-right: 240px;
+  
 }
 .log-in-input {
   margin: 10px 0;

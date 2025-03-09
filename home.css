@@ -709,6 +709,11 @@ body {
   .features-section {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    justify-items: center;
+  }
+  .feature h3 {
+    text-align: center; /* מוודא שהכותרות יישארו ממורכזות */
+    width: 100%;
   }
 }
 
@@ -717,5 +722,11 @@ body {
   .features-section {
     grid-template-columns: 1fr;
     gap: 10px;
+    justify-items: center; 
+  }
+  .feature h3 {
+    text-align: center; /* מוודא שהכותרות יישארו ממורכזות */
+    width: 100%;
+    padding-right: 200px;
   }
 }
