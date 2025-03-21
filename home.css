@@ -112,9 +112,9 @@
 }
 
 /* Hide menu by default */
-.nav-items {
+  .nav-items {
   list-style: none;
-  display: none;
+  display: flex;
   flex-direction: column;
   position: absolute;
   background: white;
@@ -122,7 +122,10 @@
   left: 0;
   top: 60px;
   padding: 15px;
-}
+}  
+
+
+
 
 /* Show menu when checkbox is checked */
 #menu-toggle:checked ~ .nav-items {
@@ -230,10 +233,10 @@ nav {
   margin-left: auto;
   gap: 50px;
 }  */
-.nav_items {
+.nav-items {
   justify-content: center; /* מצמיד למרכז */
   align-items: center;
-  gap: 40px; /* רווחים בין הכפתורים */
+  gap: 70px; /* רווחים בין הכפתורים */
   list-style: none;
   padding: 0;
   margin: 0 auto; /* מחייב להיות במרכז */
@@ -325,7 +328,7 @@ nav {
 
 .collection-item a {
   position: absolute;
-  bottom: 20px; /* הצמדת הכיתוב לתחתית התמונה */
+  bottom: 40px; /* הצמדת הכיתוב לתחתית התמונה */
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -336,13 +339,17 @@ nav {
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  padding: 30px 20px;
-  background: transparent; /* ביטול הרקע */
-  transition: transform 0.3s ease-in-out;
+  padding: 10px 17px;
+  /* new background color*/
+   background: rgba(0, 0, 0, 0.15); 
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); 
 }
 
 .collection-item a:hover {
   color: #3b3c4f;
+  
 }
 
 @keyframes fadeInUp {
@@ -671,7 +678,7 @@ body {
   gap: 10px;
   justify-items: center; /* ממקם את כל האלמנטים במרכז */
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0;
   width: 70%; /* מתאים לרוחב מסך */
   margin: 0 auto;
   padding-right: 20px;
@@ -684,13 +691,13 @@ body {
   width: 100%;
 }
 .feature img {
-  width: 50px;
+  width: 70px;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .feature h3 {
-  font-size: 18px;
+  font-size: 22px;
   color: #3b3c4f;
   margin-top: 10px;
   text-align: center;
@@ -699,11 +706,12 @@ body {
 }
 
 .feature p {
-  font-size: 14px;
+  font-size: 16px;
   color: #7a7d81;
   max-width: 250px;
   text-align: center;
   max-width: 250px;
+  line-height: 1.6;
 }
 @media (max-width: 900px) {
   .features-section {
